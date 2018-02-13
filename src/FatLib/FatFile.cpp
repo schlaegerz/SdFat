@@ -138,7 +138,7 @@ bool FatFile::createContiguous(FatFile* dirFile,
     DBG_FAIL_MACRO;
     goto fail;
   }
-  if (!open(dirFile, path, O_CREAT | O_EXCL | O_RDWR)) {
+  if (!open(dirFile, path, O_CREAT | O_EXCL | O_RDWR | O_SYNC)) {
     DBG_FAIL_MACRO;
     goto fail;
   }
